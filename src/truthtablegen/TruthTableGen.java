@@ -16,7 +16,7 @@ public class TruthTableGen {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int n = 4;
+        int n = 10;
 
         long startTime = System.currentTimeMillis();
         TruthTable.printTruthTable(n);
@@ -26,26 +26,25 @@ public class TruthTableGen {
         System.out.println("\n : " + duree);
 
         //methode 2
-        Scanner sc = new Scanner(System.in);
-
-       // TruthTableArr ob = new TruthTableArr();
+      //  Scanner sc = new Scanner(System.in);
+        int num ;
+        //int num = sc.nextInt();
+        // TruthTableArr ob = new TruthTableArr();
         System.out.println("Nombre de variable booleen");
-        int num = sc.nextInt();
+       
+        //test
+        num = n;
         int pownum = (int) Math.pow(2, num);
-//        boolean array[][] = new boolean[pownum][num];
-//        ob.arr = array;
-//        array = ob.printtt(num);
-//        for (int i = 0; i < num; i++) {
-//            for (int j = 0; j < (Math.pow(2, num)); j++) {
-//
-//                System.out.println(array[j][i]);
-//            }
-//        }
-        char arr[][] = new char[pownum+1][num];
-        TruthTableArr ob2 = new TruthTableArr(arr,pownum,num);
+        char arr[][] = new char[pownum + 1][num];
+        TruthTableArr ob2 = new TruthTableArr(arr, pownum, num);
+
+        long startTime1 = System.currentTimeMillis();
         ob2.buildTT();
         ob2.affiche();
-        
+        double duree1 = (System.currentTimeMillis() - startTime1);
+
+        System.out.println("Methode 2 ");
+        System.out.println("\n : " + duree1);
 
     }
 
